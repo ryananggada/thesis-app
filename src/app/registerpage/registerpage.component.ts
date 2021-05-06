@@ -83,6 +83,6 @@ export class RegisterpageComponent implements OnInit {
       return;
     }
 
-    var profile = new Profile(0, firstname, lastname, gender, dateofbirth, address, email, username, password);
+    //var profile = new Profile(0, firstname, lastname, gender, dateofbirth, address, email, username, password);
   }
 }
