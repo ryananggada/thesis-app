@@ -1,61 +1,15 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {
-  margin: 0 !important;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #333;
-}
-
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-}
-
-.topnav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.topnav a:hover {
-  background-color: rgb(8, 23, 241);
-  color: rgb(248, 244, 244);
-}
-
-.topnav a.active {
-  background-color: #0407aa;
-  color: white;
-}
-
-body {
-  background-image: url('medical.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;  
-  background-size: cover;
-}
-
-h1 {
-  text-align: center;
-  font-size: 75px;
-  font-family:'Montserrat', sans-serif;
-}
-
-.footer {
-   position: fixed;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   background-color: black;
-   color: white;
-   text-align: center;
-}
-
-</style>
+<link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<link rel="stylesheet" href="/fonts/iconic/css/material-design-iconic-font.min.css">
+<link rel="stylesheet" href="/vendor/animate/animate.css">
+<link rel="stylesheet" href="/vendor/css-hamburgers/hamburgers.min.css">
+<link rel="stylesheet" href="/vendor/animsition/css/animsition.min.css">
+<link rel="stylesheet" href="/vendor/select2/select2.min.css">
+<link rel="stylesheet" href="/vendor/daterangepicker/daterangepicker.css">
 </head>
 <body>
 
@@ -67,9 +21,13 @@ h1 {
   <div>
     <a routerLink="/login" routerLinkActive="active">Login</a>
   </div>
+  <div>
+    <a routerLink="/symptomfiltering" routerLinkActive="active">Symptoms Filtering</a>
+  </div>
 </div>
 
 <h1>MEDICINISH</h1>
+<router-outlet></router-outlet>
 
 <div class="footer">
   <p>BINUS INTERNATIONAL</p>
@@ -80,4 +38,3 @@ h1 {
 
 
 
-<router-outlet></router-outlet>

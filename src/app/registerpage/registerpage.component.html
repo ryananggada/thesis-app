@@ -3,58 +3,61 @@
 <title>Medicinish Register Account Page</title>
 
 <body>
-    <form id="login-form" class="form" ng-submit="register()" [formGroup]="registerGroup">
-        <h3 class="text-dark text-center">Register an Account</h3>
-
-        <div class="form-group input-group">
-            <label for= "firstname" class="text-dark">Firstname:</label><br>
-            <input name="" class="form-control" placeholder="First Name" type="text" formControlName="firstname"
+  <div class="form_wrapper">
+    <div class="form_container">
+      <div class="title_container">
+        <h2>Register An Account</h2>
+      </div>
+      <div class="row clearfix">
+        <div class="">
+          <form>
+            <div class="input_field"> <span><i aria-hidden="true"></i></span>
+              <input type="text" name="firstname" placeholder="FirstName" required />
+            </div>
+            <div class="input_field"> <span><i aria-hidden="true"></i></span>
+              <input type="text" name="lastname" placeholder="LastName" required />
+            </div>
+            <div class="input_field radio_option">
+              <input type="radio" name="radiogroup1" id="rd1">
+              <label for="rd1">Male</label>
+              <input type="radio" name="radiogroup1" id="rd2">
+              <label for="rd2">Female</label>
+            </div>
+            <div class="input_field"> <span><i aria-hidden="true"></i></span>
+              <input name="" class="form-control" placeholder="mm/dd/yy" type="text" formControlName="dateofbirth"
               required>
+            </div>
+            <div class="input_field"> <span><i aria-hidden="true"></i></span>
+              <input type="password" name="password" placeholder="Password" required />
+            </div>
+            <div class="input_field"> <span><i aria-hidden="true"></i></span>
+              <input type="password" name="password" placeholder="Re-type Password" required />
+            </div>
+            <div class="row clearfix">
+              <div class="col_half">
+                <div class="input_field"> <span><i aria-hidden="true"></i></span>
+                  <input type="text" name="name" placeholder="First Name" />
+                </div>
+              </div>
+              <div class="col_half">
+                <div class="input_field"> <span><i aria-hidden="true"></i></span>
+                  <input type="text" name="name" placeholder="Last Name" required />
+                </div>
+              </div>
+            </div>
+                <div class="input_field select_option">
+                  <select>
+                    <option>Select a country</option>
+                    <option>Option 1</option>
+                    <option>Option 2</option>
+                  </select>
+                </div>
+            <input class="button" type="submit" value="Register" />
+          </form>
         </div>
-
-        <div class="form-group input-group">
-            <label for= "lastname" class="text-dark">Lastname:</label><br>
-            <input name="" class="form-control" placeholder="Last Name" type="text" formControlName="lastname"
-              required>
-        </div>
-
-        <div class="form-group input-group">
-            <label for= "gender" class="text-dark">Gender:</label><br>
-            <input name="" class="form-control" placeholder="Gender" type="text" formControlName="gender"
-              required>
-        </div>
-
-        <div class="form-group input-group">
-            <label for= "dateofbirth" class="text-dark">DOB:</label><br>
-            <input name="" class="form-control" placeholder="mm/dd/yy" type="text" formControlName="dateofbirth"
-              required>
-        </div>
-
-        <div class="form-group input-group">
-            <label for= "address" class="text-dark">Address:</label><br>
-            <input name="" class="form-control" placeholder="Address" type="text" formControlName="address"
-              required>
-        </div>
-
-        <div class="form-group input-group">
-            <label for= "email" class="text-dark">Email:</label><br>
-            <input name="" class="form-control" placeholder="Email" type="email" formControlName="email"
-              required>
-        </div>
-
-        <div class="form-group input-group">
-            <label for= "username" class="text-dark">Username:</label><br>
-            <input name="" class="form-control" placeholder="Username" type="text" formControlName="username"
-              required>
-        </div>
-
-        <div class="form-group input-group">
-            <label for= "password" class="text-dark">Password:</label><br>
-            <input name="" class="form-control" placeholder="Password" type="text" formControlName="password"
-              required>
-        </div>
-        <input type="submit" name="submit" class="btn btn-primary" value="register" style="border-radius: 50px; width: 100%;" (click)="register()">
-    </form>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
 
