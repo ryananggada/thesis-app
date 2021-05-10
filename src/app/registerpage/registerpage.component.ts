@@ -4,11 +4,12 @@ import { FormGroup } from '@angular/forms';
 import { FormControl } from '@angular/forms';
 import { Router } from '@angular/router'
 import { Profile } from '../models/userprofile';
+
 //import { ProfilesService } from '../services/profiles.services';
 
 
 @Component({
-  selector: 'app-registerpage',
+  selector: 'app-registerpage', 
   templateUrl: './registerpage.component.html',
   styleUrls: ['./registerpage.component.scss']
 })

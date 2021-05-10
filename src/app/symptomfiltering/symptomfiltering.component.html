@@ -1,53 +1,53 @@
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<html>
-<title>Medicinish Symptoms Filtering</title>
+<div class="wrapper">
+  <div class="container">
+    <span class="choose">First Symptom</span>
+    <mat-form-field appearance="fill">
+      <mat-label>Choose your symptoms</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let symptom of symptoms" [value]="symptoms.values">
+          {{symptom.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  <span class="msg"></span>
+  </div>
 
-<body>
-    <form id="login-form" class="form" ng-submit="register()">
-        <h3 class="text-dark text-center">Please List Down Your Symptoms (Minimum 1 Maximum 3)</h3>
+  <div class="container">
+  <span class="choose">Second Symptom</span>
+  <mat-form-field appearance="fill">
+    <mat-label>Choose your symptoms</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let symptom of symptoms" [value]="symptoms.values">
+        {{symptom.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <span class="msg"></span>
+  </div>
 
-        <div class="form-group input-group">
-            <label for= "symptoms1" class="text-dark">Symptoms:</label><br>
-            <input name="" class="form-control" placeholder="First Symptom" type="text" formControlName="firstsymptom"
-              required>
-        </div>
+  <div class="container">
+    <span class="choose">Third Symptom</span>
+    <mat-form-field appearance="fill">
+      <mat-label>Choose your symptoms</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let symptom of symptoms" [value]="symptoms.values">
+          {{symptom.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <span class="msg"></span>
+  </div>
 
-        <div class="form-group input-group">
-            <label for= "symptoms2" class="text-dark">Symptoms:</label><br>
-            <input name="" class="form-control" placeholder="Second Symptom" type="text" formControlName="secondsymptom"
-              required>
-        </div>
-
-        <div class="form-group input-group">
-            <label for= "symptoms3" class="text-dark">Symptoms:</label><br>
-            <input name="" class="form-control" placeholder="Third Symptom" type="text" formControlName="thirdsymptom"
-              required>
-        </div>
-
-    <form id="login-form" class="form" ng-submit="register()">
-        <h3 class="text-dark text-center">Please List Down Your Allergens(Minimum 1 Maximum 3)</h3>
-
-        <div class="form-group input-group">
-            <label for= "allergens1" class="text-dark">Allergens:</label><br>
-            <input name="" class="form-control" placeholder="First Allergen" type="text" formControlName="firstallergen"
-              required>
-        </div>
-
-        <div class="form-group input-group">
-            <label for= "allergens2" class="text-dark">Allergens:</label><br>
-            <input name="" class="form-control" placeholder="Second Allergen" type="text" formControlName="secondallergen"
-              required>
-        </div>
-
-        <div class="form-group input-group">
-            <label for= "allergens3" class="text-dark">Allergens:</label><br>
-            <input name="" class="form-control" placeholder="Third Allergen" type="text" formControlName="thirdallergen"
-              required>
-        </div>
-    </form>
-    </form>
-</body>
-</html>
-
-
-    
+  <div class="container">
+    <span class="choose">Do you have any drug allergies?</span>
+    <mat-form-field appearance="outline">
+      <mat-label class="boldtitle">Select Answer</mat-label>
+      <mat-select class= "backgroundselect">
+        <mat-option *ngFor="let option of options" [value]="options.values">
+          {{option.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <span class="msg"></span>
+  </div>
+</div>

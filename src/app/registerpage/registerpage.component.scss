@@ -1,13 +1,7 @@
-$yellow:#f5ba1a;
 $black:#000000;
 $grey:#cccccc;
+$blue:rgba(0, 195, 255, 0.61);
 
-
-body {
-	font-family: Verdana, Geneva, sans-serif;
-	font-size: 14px;
-	background: #f2f2f2;
-}
 .clearfix {
 	&:after {
 		content: "";
@@ -19,14 +13,16 @@ body {
 }
 .form_wrapper {
 	background: #fff;
-	width: 400px;
-	max-width: 100%;
+	width: 600px;
 	box-sizing: border-box;
 	padding: 25px;
-	margin: 8% auto 0;
+	margin: 2% auto 0;
 	position: relative;
 	z-index: 1;
-	border-top: 5px solid $yellow;
+	border-top: 1px solid $blue;
+    border-left: 1px solid $blue;
+    border-right: 1px solid $blue;
+    border-bottom: 1px solid $blue;
 	-webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
 	-moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
 	box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
@@ -97,7 +93,7 @@ body {
 	input {
     &[type="text"], &[type="email"], &[type="password"] {
       width: 100%;
-      padding: 8px 10px 9px 35px;
+      padding: 8px 10px 9px 5px;
       height: 35px;
       border: 1px solid $grey;
       box-sizing: border-box;
@@ -111,14 +107,14 @@ body {
       background: #fafafa;
     }
     &[type="text"]:focus, &[type="email"]:focus, &[type="password"]:focus {
-      -webkit-box-shadow: 0 0 2px 1px rgba(255, 169, 0, 0.5);
-      -moz-box-shadow: 0 0 2px 1px rgba(255, 169, 0, 0.5);
-      box-shadow: 0 0 2px 1px rgba(255, 169, 0, 0.5);
-      border: 1px solid $yellow;
+      -webkit-box-shadow: 0 0 2px 1px rgba(0, 60, 255, 0.685);
+      -moz-box-shadow: 0 0 2px 1px rgba(0, 60, 255, 0.685);
+      box-shadow: 0 0 2px 1px rgba(0, 60, 255, 0.685);
+      border: 1px solid $blue;
       background: #fafafa;
     }
     &[type="submit"] {
-		background: $yellow;
+		background: $blue;
 		height: 35px;
 		line-height: 35px;
 		width: 100%;
@@ -133,10 +129,10 @@ body {
 		-ms-transition: all 0.30s ease-in-out;
 		transition: all 0.30s ease-in-out;
 		&:hover {
-			background: darken($yellow,7%);
+			background: darken($blue,7%);
 		}
 		&:focus {
-			background: darken($yellow,7%);
+			background: darken($blue,7%);
 		}
 	}    
     &[type="checkbox"], &[type="radio"] {
@@ -287,9 +283,9 @@ body {
 	z-index: 1;
 	text-align: center;
 	padding: 15px;
-	color: $yellow;
+	color: $blue;
 	a {
-		color: darken($yellow,7%);
+		color: darken($blue,7%);
 	}
 }
 @-webkit-keyframes check {
