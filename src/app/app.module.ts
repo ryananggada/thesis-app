@@ -15,6 +15,7 @@ import { ShoppingcartComponent } from './shoppingcart/shoppingcart.component';
 import { PaymentpageComponent } from './paymentpage/paymentpage.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { User } from './models/newuser';
+import { EditprofileComponent } from './editprofile/editprofile.component';
 
 
 
@@ -29,6 +30,7 @@ import { User } from './models/newuser';
     ShoppingcartComponent,
     PaymentpageComponent,
     HomepageComponent,
+    EditprofileComponent,
       
   ],
   

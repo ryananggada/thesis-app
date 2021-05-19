@@ -7,6 +7,7 @@ import {ProductlistComponent} from './productlist/productlist.component'
 import {RegisterpageComponent} from './registerpage/registerpage.component'
 import {ShoppingcartComponent} from './shoppingcart/shoppingcart.component'
 import {SymptomfilteringComponent} from './symptomfiltering/symptomfiltering.component'
+import {EditprofileComponent} from './editprofile/editprofile.component'
 
 const routes: Routes = [
   { path: 'homepage', component: HomepageComponent },
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'register', component: RegisterpageComponent },
   { path: 'shoppingcart', component: ShoppingcartComponent},
   { path: 'symptomfiltering', component: SymptomfilteringComponent },
+  { path: 'editprofile', component: EditprofileComponent }
 ];
 
 @NgModule({
