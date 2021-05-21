@@ -1,47 +1,17 @@
-<div class="slideshow-container">
-
-    <div class="mySlides fade">
-      <img src="/../assets/panadoldemam.jpeg" style="width:25%">
-      <div class="text">Panadol</div>
-    </div>
-    
-    <div class="mySlides fade">
-      <img src="/../assets/Actifedmerah.jpeg" style="width:25%">
-      <div class="text">Actifed</div>
-    </div>
-    
-    <div class="mySlides fade">
-      <img src="/../assets/mylanta.jpeg" style="width:25%">
-      <div class="text">Mylanta</div>
-    </div>
-</div>
-
-<div class="dots">
-    <span class="dot"></span> 
-    <span class="dot"></span> 
-    <span class="dot"></span> 
-</div>
-<br>
-<script>
-    var slideIndex = 0;
-    showSlides();
-    
-    function showSlides() {
-      var i;
-      var slides = document.getElementsByClassName("mySlides");
-      var dots = document.getElementsByClassName("dot");
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-      }
-      slideIndex++;
-      if (slideIndex > slides.length) {slideIndex = 1}    
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex-1].style.display = "block";  
-      dots[slideIndex-1].className += " active";
-      setTimeout(showSlides, 2000); // Change image every 2 seconds
-    }
-</script>
-
-    
+<carousel
+  [cellsToShow]="1"
+  [autoplay]="true"
+  [autoplayInterval]="5000"
+  [dots]="true"
+  [loop]="true"
+>
+  <div class="carousel-cell" style="background-color: blue">
+    <img src="/../assets/panadoldemam.jpeg" />
+  </div>
+  <div class="carousel-cell">
+    <img src="/../assets/Actifedmerah.jpeg" />
+  </div>
+  <div class="carousel-cell">
+    <img src="/../assets/mylanta.jpeg" />
+  </div>
+</carousel>

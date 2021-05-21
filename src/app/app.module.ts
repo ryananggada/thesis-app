@@ -1,10 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatNativeDateModule } from '@angular/material/core'; 
-import {MatSelectModule} from '@angular/material/select';
+import { MatNativeDateModule } from '@angular/material/core';
+
+import { MatSelectModule } from '@angular/material/select';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RegisterpageComponent } from './registerpage/registerpage.component';
@@ -16,9 +17,7 @@ import { PaymentpageComponent } from './paymentpage/paymentpage.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { User } from './models/newuser';
 import { EditprofileComponent } from './editprofile/editprofile.component';
-
-
-
+import { IvyCarouselModule } from 'angular-responsive-carousel';
 
 @NgModule({
   declarations: [
@@ -31,9 +30,8 @@ import { EditprofileComponent } from './editprofile/editprofile.component';
     PaymentpageComponent,
     HomepageComponent,
     EditprofileComponent,
-      
   ],
-  
+
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -43,10 +41,10 @@ import { EditprofileComponent } from './editprofile/editprofile.component';
     MatDatepickerModule,
     BrowserAnimationsModule,
     MatSelectModule,
+    IvyCarouselModule,
   ],
 
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-
-export class AppModule { }
+export class AppModule {}
