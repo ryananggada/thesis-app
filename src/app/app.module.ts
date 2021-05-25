@@ -16,6 +16,7 @@ import { PaymentpageComponent } from './paymentpage/paymentpage.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { User } from './models/newuser';
 import { EditprofileComponent } from './editprofile/editprofile.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -31,6 +32,7 @@ import { EditprofileComponent } from './editprofile/editprofile.component';
     PaymentpageComponent,
     HomepageComponent,
     EditprofileComponent,
+    FooterComponent,
       
   ],
   

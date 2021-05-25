@@ -149,7 +149,7 @@ $blue:rgba(0, 195, 255, 0.61);
     &[type="checkbox"], &[type="radio"] {
       border: 0;
       clip: rect(0 0 0 0);
-      height: 1px;
+      height: 10px;
       margin: -1px;
       overflow: hidden;
       padding: 0;
@@ -222,8 +222,8 @@ $blue:rgba(0, 195, 255, 0.61);
     &:before {
       content: "";
       display: inline-block;
-      width: 0.5em;
-      height: 0.5em;
+      width: 15px;
+      height: 15px;
       margin-right: 0.5em;
       border-radius: 100%;
       vertical-align: -3px;

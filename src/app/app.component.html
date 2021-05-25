@@ -1,19 +1,42 @@
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
-<link rel="stylesheet" href="/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
-<link rel="stylesheet" href="/fonts/iconic/css/material-design-iconic-font.min.css">
-<link rel="stylesheet" href="/vendor/animate/animate.css">
-<link rel="stylesheet" href="/vendor/css-hamburgers/hamburgers.min.css">
-<link rel="stylesheet" href="/vendor/animsition/css/animsition.min.css">
-<link rel="stylesheet" href="/vendor/select2/select2.min.css">
-<link rel="stylesheet" href="/vendor/daterangepicker/daterangepicker.css">
+<!-- <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+  <link rel="stylesheet" href="/fonts/iconic/css/material-design-iconic-font.min.css">
+  <link rel="stylesheet" href="/vendor/animate/animate.css">
+  <link rel="stylesheet" href="/vendor/css-hamburgers/hamburgers.min.css">
+  <link rel="stylesheet" href="/vendor/animsition/css/animsition.min.css">
+  <link rel="stylesheet" href="/vendor/select2/select2.min.css">
+  <link rel="stylesheet" href="/vendor/daterangepicker/daterangepicker.css">
 </head>
-<body>
 
-<div class="topnav">
+<body> -->
+<nav class="navbar navbar-expand-lg navbar-dark dark"> <a class="navbar-brand" routerLink="/homepage">
+    <h3>Medicinish</h3>
+  </a>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item"> <a class="nav-link" routerLink="/register" routerLinkActive="active"> Register </a>
+      </li>
+      <li class="nav-item"> <a class="nav-link" routerLink="/login" routerLinkActive="active">Login</a>
+      </li>
+      <li class="nav-item"> <a class="nav-link" routerLink="/symptomfiltering" routerLinkActive="active">Symptoms
+          Filtering</a>
+      </li>
+      <li class="nav-item"> <a class="nav-link" routerLink="/productlist" routerLinkActive="active">Product List</a>
+      </li>
+      <li class="nav-item"> <a class="nav-link" routerLink="/editprofile" routerLinkActive="active">Edit Profile</a>
+      </li>
+      <li class="nav-item"> <a class="nav-link" routerLink="/shoppingcart" routerLinkActive="active">Shopping Cart</a>
+      </li>
+      <li class="nav-item"> <a class="nav-link" routerLink="/payment" routerLinkActive="active">Payment</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!-- batas -->
+<!-- <div class="topnav">
   <a routerLink="/homepage" routerLinkActive="active">MEDICINISH</a>
   <div>
     <a routerLink="/register" routerLinkActive="active">Register</a>
@@ -30,16 +53,19 @@
   <div>
     <a routerLink="/editprofile" routerLinkActive="active">Edit Profile</a>
   </div>
+  <div>
+    <a routerLink="/shoppingcart" routerLinkActive="active">Shopping Cart</a>
+  </div>
+  <div>
+    <a routerLink="/payment" routerLinkActive="active">Payment</a>
+  </div>
 
-</div>
+</div> -->
 
 
 
 
 <router-outlet></router-outlet>
+<app-footer></app-footer>
 
-</body>
-</html>
-
-
-
+<!-- </body> -->
