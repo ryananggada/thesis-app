@@ -18,11 +18,11 @@ const routes: Routes = [
   { path: 'register', component: RegisterpageComponent },
   { path: 'shoppingcart', component: ShoppingcartComponent },
   { path: 'symptomfiltering', component: SymptomfilteringComponent },
-  { path: 'editprofile', component: EditprofileComponent }
+  { path: 'editprofile', component: EditprofileComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule { }

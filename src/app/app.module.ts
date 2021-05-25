@@ -1,10 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatNativeDateModule } from '@angular/material/core'; 
-import {MatSelectModule} from '@angular/material/select';
+import { MatNativeDateModule } from '@angular/material/core';
+
+import { MatSelectModule } from '@angular/material/select';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RegisterpageComponent } from './registerpage/registerpage.component';
@@ -33,9 +34,9 @@ import { FooterComponent } from './footer/footer.component';
     HomepageComponent,
     EditprofileComponent,
     FooterComponent,
-      
+
   ],
-  
+
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -48,7 +49,6 @@ import { FooterComponent } from './footer/footer.component';
   ],
 
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-
 export class AppModule { }
