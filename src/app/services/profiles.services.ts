@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 import { Router } from '@angular/router';
-import { Profile } from '../models/userprofile';
+import { Profile } from '../models/Profile';
 import { HttpHeaders } from '@angular/common/http';
 
 const httpOptions = {
@@ -52,11 +52,11 @@ export class ProfilesService {
       return false;
     }
 
-    if (profile.Username == null || ( profile.Username.length > 12)) {
+    if (profile.Username == null || (profile.Username.length > 12)) {
       return false;
     }
 
-    if (profile.Password == null || ( profile.Password.length > 12)) {
+    if (profile.Password == null || (profile.Password.length > 12)) {
       return false;
     }
 
@@ -89,11 +89,11 @@ export class ProfilesService {
       return false;
     }
 
-    if (profile.Username == null || ( profile.Username.length > 12)) {
+    if (profile.Username == null || (profile.Username.length > 12)) {
       return false;
     }
 
-    if (profile.Password == null || ( profile.Password.length > 12)) {
+    if (profile.Password == null || (profile.Password.length > 12)) {
       return false;
     }
 
@@ -106,13 +106,13 @@ export class ProfilesService {
   }
 }
 
-  
-
-    
 
 
 
-  
+
+
+
+
 
 
 

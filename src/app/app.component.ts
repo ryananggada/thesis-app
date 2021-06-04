@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'tong-fang';
+  register: boolean = false;
 }
+
+

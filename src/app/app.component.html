@@ -1,22 +1,9 @@
-<!-- <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
-  <link rel="stylesheet" href="/fonts/iconic/css/material-design-iconic-font.min.css">
-  <link rel="stylesheet" href="/vendor/animate/animate.css">
-  <link rel="stylesheet" href="/vendor/css-hamburgers/hamburgers.min.css">
-  <link rel="stylesheet" href="/vendor/animsition/css/animsition.min.css">
-  <link rel="stylesheet" href="/vendor/select2/select2.min.css">
-  <link rel="stylesheet" href="/vendor/daterangepicker/daterangepicker.css">
-</head>
-
-<body> -->
 <nav class="navbar navbar-expand-lg navbar-dark dark"> <a class="navbar-brand" routerLink="/homepage">
-    <h3>Medicinish</h3>
+    <img class="logocenter" img src="/../assets/logowhite.png" width="235" height="70">
   </a>
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav">
+
+  <div *ngIf="register" class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav ml-auto">
       <li class="nav-item"> <a class="nav-link" routerLink="/register" routerLinkActive="active"> Register </a>
       </li>
       <li class="nav-item"> <a class="nav-link" routerLink="/login" routerLinkActive="active">Login</a>
@@ -35,37 +22,10 @@
     </ul>
   </div>
 </nav>
-<!-- batas -->
-<!-- <div class="topnav">
-  <a routerLink="/homepage" routerLinkActive="active">MEDICINISH</a>
-  <div>
-    <a routerLink="/register" routerLinkActive="active">Register</a>
-  </div>
-  <div>
-    <a routerLink="/login" routerLinkActive="active">Login</a>
-  </div>
-  <div>
-    <a routerLink="/symptomfiltering" routerLinkActive="active">Symptoms Filtering</a>
-  </div>
-  <div>
-    <a routerLink="/productlist" routerLinkActive="active">Product List</a>
-  </div>
-  <div>
-    <a routerLink="/editprofile" routerLinkActive="active">Edit Profile</a>
-  </div>
-  <div>
-    <a routerLink="/shoppingcart" routerLinkActive="active">Shopping Cart</a>
-  </div>
-  <div>
-    <a routerLink="/payment" routerLinkActive="active">Payment</a>
-  </div>
-
-</div> -->
 
 
 
 
 <router-outlet></router-outlet>
-<app-footer></app-footer>
 
-<!-- </body> -->
+<app-footer></app-footer>

@@ -7,36 +7,37 @@
     </div>
     <div class="row clearfix">
       <div class="col-md-12">
-        <form>
+        <form #registerform="ngForm">
           <div class="input_field">
-            <input type="text" name="firstname" placeholder="FirstName" required />
+            <input type="text" name="firstname" placeholder="FirstName" [(ngModel)]="test.first_name" required />
           </div>
           <div class="input_field">
-            <input type="text" name="lastname" placeholder="LastName" required />
+            <input type="text" name="lastname" placeholder="LastName" [(ngModel)]="test.last_name" required />
           </div>
           <div class="input_field radio_option">
-            <input type="radio" name="radiogroup1" id="rd1">
+            <input type="radio" name="radiogroup1" id="rd1" [(ngModel)]="test.gender" value="M">
             <label for="rd1">Male</label>
-            <input type="radio" name="radiogroup1" id="rd2">
+            <input type="radio" name="radiogroup1" id="rd2" [(ngModel)]="test.gender" value="F">
             <label for="rd2">Female</label>
           </div>
           <div class="input_field">
-            <input name="" class="form-control" placeholder="mm/dd/yy" type="text" formControlName="dateofbirth"
-              required>
+            <input type="date" name="dateofbirth" class="form-control" placeholder="YY-MM-DD"
+              [(ngModel)]="test.date_of_birth" required>
           </div>
           <div class="input_field">
-            <input type="text" name="address" placeholder="Address" required />
+            <input type="text" name="address" placeholder="Address" [(ngModel)]="test.address" required />
           </div>
           <div class="input_field">
-            <input type="email" name="email" placeholder="Email" required />
+            <input type="email" name="email" placeholder="Email" [(ngModel)]="test.email" required />
           </div>
           <div class="input_field">
-            <input type="text" name="username" placeholder="Username" required />
+            <input type="text" name="username" placeholder="Username" [(ngModel)]="test.username" required />
           </div>
           <div class="input_field">
-            <input type="password" name="password" placeholder="Password" required />
+            <input type="password" name="password" placeholder="Password" [(ngModel)]="test.password" required />
           </div>
-          <input class="button" type="submit" value="Register" />
+          <input class="button" type="submit" (click)="loginpage()" value="Register"
+            [disabled]="!registerform.form.valid" />
         </form>
       </div>
     </div>

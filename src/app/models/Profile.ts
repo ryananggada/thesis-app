@@ -9,7 +9,7 @@ export class Profile {
     public Username: string;
     public Password: string;
 
-    public constructor(profileId: number, firstName: string, lastName: string, Gender: string, dateofBirth: string, Address: string, Email: string, userName: string, Password: string){
+    public constructor(profileId: number, firstName: string, lastName: string, Gender: string, dateofBirth: string, Address: string, Email: string, userName: string, Password: string) {
         this.Profileid = profileId;
         this.Firstname = firstName;
         this.Lastname = lastName;
@@ -20,4 +20,5 @@ export class Profile {
         this.Username = userName;
         this.Password = Password;
     }
+
 }

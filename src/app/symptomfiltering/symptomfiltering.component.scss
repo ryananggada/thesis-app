@@ -2,7 +2,9 @@
     background-image: url('/../assets/pill.jpg');
     background-repeat: no-repeat; 
     background-size: cover;
-    margin-top: 100px;
+    height: max-content !important;
+    // background-attachment: fixed !important;
+    // margin-top: 100px;
 }
 
 span.msg,
@@ -24,16 +26,32 @@ span.choose {
   width: 350;
   height: 350;
   margin-top: -100px;
+  margin-bottom: -70px;
+}
+
+.symptomsfilteringbox{
+  background-color: rgb(255, 255, 255, 0.79);
+  border: solid 1px black;
+  border-radius: 20px;
+  height: 850px;
+  width: 600px;
+  padding-top: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+
+  
 }
 
 .con{
   width: 100%;
   margin: 0px auto 0;
   text-align: center;
+  // margin-top: 25px;
 }
 
 .upper{
-  margin-top: -80px;
+  margin-top: 40px;
 }
 
 .boldtitle{
@@ -53,14 +71,15 @@ span.choose {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  margin: 450px 200px;
   cursor: pointer;
   border-radius: 16px;
   // margin-right: -500px;
   // margin-left: 640px;
   margin: auto;
-  margin-top: 110px;
+  // margin-top: 110px;
   margin-bottom: 200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .button:hover{

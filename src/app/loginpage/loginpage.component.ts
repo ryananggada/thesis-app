@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { FormGroup } from '@angular/forms';
 import { FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
+import { AppComponent } from '../app.component';
+import { Test } from '../models/test';
+import { LoginService } from '../services/login.service';
 
 @Component({
   selector: 'app-loginpage',
@@ -9,36 +13,32 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./loginpage.component.scss']
 })
 export class LoginpageComponent implements OnInit {
-  public loginGroup: FormGroup;
-  usersService: any;
+  test = new Test();
+  response = "";
 
-  constructor(private formBuilder: FormBuilder) {
-    this.loginGroup = new FormGroup({
-      username: new FormControl(),
-      password: new FormControl(),
-    });
-   }
-
-  ngOnInit(): void {
+  constructor(private router: Router, private appComponent: AppComponent, private loginservice: LoginService) {
   }
 
-  public login() {
-    var username = this.loginGroup.get('username');
-    var password = this.loginGroup.get('password');
-    this.usersService.login(username).subscribe((userId: number) => {
-      if (userId == 0) {
-        //Invalid login details.
-        window.alert("Username or Password is incorrect.");
+  ngOnInit(): void {
+    this.appComponent.register = false;
+  }
+
+  symptomsfilteringpage() {
+    this.router.navigateByUrl('symptomfiltering');
+    console.log("symptompage")
+  }
+
+  tests() {
+    this.loginservice.login(this.test).subscribe(
+      data => {
+        console.log("Get response")
+        this.response = data;
+        console.log(this.response)
+        this.router.navigateByUrl('symptomfiltering');
+      },
+      error => {
+        alert("Form must be filled");
       }
-      this.usersService.getUser(userId).subscribe((user: null) => {
-        //Check if user exists
-        if (user != null) {
-          this.usersService.authorizeLogin(userId)
-        }
-      //Display error popup
-        else {
-        }
-      })
-    })
+    )
   }
 }

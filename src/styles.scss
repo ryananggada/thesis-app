@@ -7,7 +7,7 @@
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
 // Be sure that you only ever include this mixin once!
-@import url("https://fonts.googleapis.com/css?family=Montserrat:500,700");
+// @import url("https://fonts.googleapis.com/css?family=Montserrat:500,700");
 
 @include mat-core();
 
@@ -19,9 +19,13 @@ $tong-fang-accent: mat-palette($mat-pink, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
 $tong-fang-warn: mat-palette($mat-red);
-
+$font-stack: Montserrat;
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
+$tong-fang-typography: mat-typography-config(
+  $font-family: 'Montserrat',
+);
+
 $tong-fang-theme: mat-light-theme((
   color: (
     primary: $tong-fang-primary,
@@ -38,3 +42,4 @@ $tong-fang-theme: mat-light-theme((
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
 html, body { height: 100%; font-family: 'Montserrat'; }
+
