@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-homepage',
@@ -7,10 +8,14 @@ import { Router } from '@angular/router';
   styleUrls: ['./homepage.component.scss'],
 })
 export class HomepageComponent implements OnInit {
-  constructor(private router: Router) { }
+  constructor(private router: Router, private appComponent: AppComponent) {
+    this.appComponent.showlogin = true;
+  }
 
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    console.log(this.appComponent.showlogin)
+  }
   registerpage() {
     this.router.navigateByUrl('register');
     console.log("registeralready")

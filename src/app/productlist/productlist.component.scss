@@ -22,10 +22,10 @@
 }
 
 .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
     max-width: 350px;
-    margin: auto;
-    // margin-top: -50px;
+    max-height: 500px;
+    margin-top: 50px;
     // margin-bottom: -488px;
     text-align: center;
     font-family: arial;

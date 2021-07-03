@@ -2,7 +2,9 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatSelect, MatSelectChange } from '@angular/material/select';
 import { Router } from '@angular/router';
 import { AppComponent } from '../app.component';
+import { MedicineParam } from '../models/medicineparam';
 import { Symptoms } from '../models/symptom';
+import { SymptomParam } from '../productlist/productlist.component';
 import { SymptomsService } from '../services/symptoms.service';
 
 interface Dropdown {
@@ -23,6 +25,8 @@ export class SymptomfilteringComponent implements OnInit {
   secondsymptom = "";
   thirdsymptom = "";
   indication = "";
+  symptomfiltering = "false";
+  medicineparam = new MedicineParam();
 
   symptoms: Dropdown[] = [
     { id: '1', viewValue: 'Fever' },
@@ -40,36 +44,41 @@ export class SymptomfilteringComponent implements OnInit {
     { id: 'safe', viewValue: 'Safe' }
   ]
 
-  constructor(private router: Router, private appComponent: AppComponent, private symptomservice: SymptomsService) {
+  constructor(private router: Router, private appComponent: AppComponent, private symptomservice: SymptomsService, private symptomparam: SymptomParam) {
+    this.appComponent.register = true;
+    this.appComponent.symptomfiltering = true;
+    this.appComponent.showlogin = false;
   }
 
   ngOnInit(): void {
-    this.appComponent.register = true;
   }
 
+
   productlistpage() {
-    this.router.navigateByUrl('productlist');
     console.log("Searching for Products")
-    console.log(this.firstsymptom)
-    console.log(this.secondsymptom)
-    console.log(this.thirdsymptom)
-    console.log(this.indication)
+    this.medicineparam.first_symptom = this.firstsymptom;
+    this.medicineparam.second_symptom = this.secondsymptom;
+    this.medicineparam.third_symptom = this.thirdsymptom;
+    this.medicineparam.indication = this.indication;
+    console.log(this.medicineparam)
+    this.symptomparam.symptom = this.medicineparam;
+    this.router.navigateByUrl('productlist');
   }
 
   selectedfirstsymptom(event: MatSelectChange) {
-    this.firstsymptom = event.value.id
+    this.firstsymptom = event.value.viewValue
   }
 
   selectedsecondsymptom(event: MatSelectChange) {
-    this.secondsymptom = event.value.id
+    this.secondsymptom = event.value.viewValue
   }
 
   selectedthirdsymptom(event: MatSelectChange) {
-    this.thirdsymptom = event.value.id
+    this.thirdsymptom = event.value.viewValue
   }
 
   selectedindication(event: MatSelectChange) {
-    this.indication = event.value.id
+    this.indication = event.value.viewValue
   }
 
   symptom() {

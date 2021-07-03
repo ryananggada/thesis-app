@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { AppComponent } from '../app.component';
+import { CreditCard } from '../models/creditcard';
+
 
 @Component({
   selector: 'app-paymentpage',
@@ -6,10 +10,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./paymentpage.component.scss']
 })
 export class PaymentpageComponent implements OnInit {
+  creditcard = true;
 
-  constructor() { }
+  constructor(private appcomponent: AppComponent) { }
 
   ngOnInit(): void {
+    this.appcomponent.showlogin = false;
+  }
+
+  creditcardbutton() {
+    this.creditcard = true;
+  }
+
+  qrcodebutton() {
+    this.creditcard = false;
   }
 
 }
+

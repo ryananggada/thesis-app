@@ -8,17 +8,22 @@ import { RegisterpageComponent } from './registerpage/registerpage.component'
 import { ShoppingcartComponent } from './shoppingcart/shoppingcart.component'
 import { SymptomfilteringComponent } from './symptomfiltering/symptomfiltering.component'
 import { EditprofileComponent } from './editprofile/editprofile.component'
+import { AuthguardGuard } from './helper/authguard.guard';
+import { PostpurchaseComponent } from './postpurchase/postpurchase.component';
+import { TryComponent } from './try/try.component';
 
 const routes: Routes = [
   { path: '', component: HomepageComponent },
   { path: 'homepage', component: HomepageComponent },
   { path: 'login', component: LoginpageComponent },
-  { path: 'payment', component: PaymentpageComponent },
-  { path: 'productlist', component: ProductlistComponent },
-  { path: 'register', component: RegisterpageComponent },
-  { path: 'shoppingcart', component: ShoppingcartComponent },
-  { path: 'symptomfiltering', component: SymptomfilteringComponent },
-  { path: 'editprofile', component: EditprofileComponent },
+  { path: 'payment', component: PaymentpageComponent, canActivate: [AuthguardGuard] },
+  { path: 'productlist', component: ProductlistComponent, canActivate: [AuthguardGuard] },
+  { path: 'register', component: RegisterpageComponent, canActivate: [AuthguardGuard] },
+  { path: 'shoppingcart', component: ShoppingcartComponent, canActivate: [AuthguardGuard] },
+  { path: 'symptomfiltering', component: SymptomfilteringComponent, canActivate: [AuthguardGuard] },
+  { path: 'editprofile', component: EditprofileComponent, canActivate: [AuthguardGuard] },
+  { path: 'postpurchase', component: PostpurchaseComponent, canActivate: [AuthguardGuard] },
+  { path: 'try', component: TryComponent, canActivate: [AuthguardGuard] }
 ];
 
 @NgModule({

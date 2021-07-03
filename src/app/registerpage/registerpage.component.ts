@@ -1,15 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
-import { FormGroup } from '@angular/forms';
-import { FormControl } from '@angular/forms';
 import { Router } from '@angular/router'
 import { AppComponent } from '../app.component';
-import { Profile } from '../models/Profile';
 import { Test } from '../models/test';
 import { RegisterService } from '../services/register.service';
-
-//import { ProfilesService } from '../services/profiles.services';
-
 
 @Component({
   selector: 'app-registerpage',
@@ -22,18 +15,13 @@ export class RegisterpageComponent implements OnInit {
   response = "";
   //We need constructor registerservice to import classes that are going to be used in this component//
   constructor(private router: Router, private appComponent: AppComponent, private registerservice: RegisterService) {
-  }
-
-  ngOnInit(): void {
     this.appComponent.register = false;
+    this.appComponent.showlogin = false;
   }
-  //Function for navigating to login page//
-  loginpage() {
-    this.router.navigateByUrl('login');
-    console.log("loginalready")
+  ngOnInit(): void {
   }
   //Function test to call function register in register service and to do error handling//
-  tests() {
+  loginpage() {
     this.registerservice.register(this.test).subscribe(
       data => {
         console.log("Get respond")
@@ -42,7 +30,7 @@ export class RegisterpageComponent implements OnInit {
         this.router.navigateByUrl('login');
       },
       error => {
-        alert("Form must be filled");
+        alert("Form must be filled! Please fill in the required forms!");
       }
     )
   }

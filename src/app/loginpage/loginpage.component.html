@@ -7,10 +7,12 @@
       <span class="header">Sign In</span>
       <form #loginform="ngForm">
         <div class="row mt-4">
-          <input class="form-control" type="text" [(ngModel)]="test.username" placeholder="Username" required>
+          <input class="form-control" type="text" [(ngModel)]="test.username" name="login" placeholder="Username"
+            required>
         </div>
         <div class="row mt-4">
-          <input class="form-control" type="password" [(ngModel)]="test.password" placeholder="Password" required>
+          <input class="form-control" type="password" [(ngModel)]="test.password" name="password" placeholder="Password"
+            required>
         </div>
         <div class="row mt-4">
           <button class="btn btn-light btn-lg btn-block" (click)="symptomsfilteringpage()" value="Login"
