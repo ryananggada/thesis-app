@@ -28,6 +28,7 @@ export class EditprofileComponent implements OnInit {
         console.log(this.response)
         // this.getuserbyprofile()
         alert("Your profile has been updated")
+        this.router.navigateByUrl('symptomfiltering');
       },
       error => {
         alert("Form must be filled");

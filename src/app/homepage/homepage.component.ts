@@ -10,6 +10,7 @@ import { AppComponent } from '../app.component';
 export class HomepageComponent implements OnInit {
   constructor(private router: Router, private appComponent: AppComponent) {
     this.appComponent.showlogin = true;
+    this.appComponent.homepage = true;
   }
 
 

@@ -5,13 +5,12 @@
 <div class="mb-3">
   <div class="row upper">
     <div *ngFor="let product of products; index as i" class="col-md-4">
-      <div *ngIf="product.name" class="card pb-0">
+      <div *ngIf="product.name" class="card pb-0" style="border: 2px solid black;">
         <img src="{{product.image_url}}" style="width:250px; height: 250px; margin-left: 15%;">
         <h3 style="font-size: 12pt;">{{product.name}}</h3>
-        <p class="price">Rp. {{product.price}}</p>
+        <p class="price" style="color: #5ea05d;">Rp. {{product.price}}</p>
         <a (click)="openDialog(i)">Click to see Description</a>
-        <button (click)="savecart(product.id!)">Add to Cart</button>
+        <button (click)="savecart(product.id!)" class="mt-2">Add to Cart</button>
       </div>
     </div>
   </div>
-</div>

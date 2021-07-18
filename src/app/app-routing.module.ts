@@ -18,7 +18,7 @@ const routes: Routes = [
   { path: 'login', component: LoginpageComponent },
   { path: 'payment', component: PaymentpageComponent, canActivate: [AuthguardGuard] },
   { path: 'productlist', component: ProductlistComponent, canActivate: [AuthguardGuard] },
-  { path: 'register', component: RegisterpageComponent, canActivate: [AuthguardGuard] },
+  { path: 'register', component: RegisterpageComponent },
   { path: 'shoppingcart', component: ShoppingcartComponent, canActivate: [AuthguardGuard] },
   { path: 'symptomfiltering', component: SymptomfilteringComponent, canActivate: [AuthguardGuard] },
   { path: 'editprofile', component: EditprofileComponent, canActivate: [AuthguardGuard] },

@@ -1,64 +1,68 @@
 <div class="bg">
   <div class="container">
     <div class="row">
-      <img class="logocenter" img src="/../assets/logo.png" width="350" height="350">
-    </div>
-    <div class="symptomsfilteringbox">
-      <div class="row upper">
-        <div class="con">
-          <span class="choose">First Symptom</span>
-          <mat-form-field appearance="fill">
-            <mat-label>Choose your symptoms</mat-label>
-            <mat-select (selectionChange)="selectedfirstsymptom($event)">
-              <mat-option *ngFor="let symptom of symptoms" [value]="symptom">
-                {{symptom.viewValue}}
-              </mat-option>
-            </mat-select>
-          </mat-form-field>
-          <span class="msg"></span>
-        </div>
-
-        <div class="con">
-          <span class="choose">Second Symptom</span>
-          <mat-form-field appearance="fill">
-            <mat-label>Choose your symptoms</mat-label>
-            <mat-select (selectionChange)="selectedsecondsymptom($event)">
-              <mat-option *ngFor="let symptom of symptoms" [value]="symptom">
-                {{symptom.viewValue}}
-              </mat-option>
-            </mat-select>
-          </mat-form-field>
-          <span class="msg"></span>
-        </div>
-
-        <div class="con">
-          <span class="choose">Third Symptom</span>
-          <mat-form-field appearance="fill">
-            <mat-label>Choose your symptoms</mat-label>
-            <mat-select (selectionChange)="selectedthirdsymptom($event)">
-              <mat-option *ngFor="let symptom of symptoms" [value]="symptom">
-                {{symptom.viewValue}}
-              </mat-option>
-            </mat-select>
-          </mat-form-field>
-          <span class="msg"></span>
-        </div>
-
-        <div class="con">
-          <span class="choose">Please choose any of the following contradictions after taking medication!</span>
-          <mat-form-field appearance="outline">
-            <mat-label class="boldtitle">Select Answer</mat-label>
-            <mat-select class="backgroundselect" (selectionChange)="selectedindication($event)">
-              <mat-option *ngFor="let indication of indications" [value]="indication">
-                {{indication.viewValue}}
-              </mat-option>
-            </mat-select>
-          </mat-form-field>
-          <span class="msg"></span>
-        </div>
+      <div class="col-md-12 text-center">
+        <img class="logocenter" img src="/../assets/logo.png" width="350" height="350">
       </div>
-      <div class="row upper">
-        <button class="button" (click)="productlistpage()">Find My Medicine!</button>
+      <div class="col-md-12">
+        <div class="symptomsfilteringbox">
+          <div class="row upper">
+            <div class="con">
+              <span class="choose">First Symptom</span>
+              <mat-form-field appearance="fill">
+                <mat-label>Choose your symptoms</mat-label>
+                <mat-select (selectionChange)="selectedfirstsymptom($event)">
+                  <mat-option *ngFor="let symptom of symptoms" [value]="symptom">
+                    {{symptom.viewValue}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+              <span class="msg"></span>
+            </div>
+
+            <div class="con">
+              <span class="choose">Second Symptom</span>
+              <mat-form-field appearance="fill">
+                <mat-label>Choose your symptoms</mat-label>
+                <mat-select (selectionChange)="selectedsecondsymptom($event)">
+                  <mat-option *ngFor="let symptom of symptoms" [value]="symptom">
+                    {{symptom.viewValue}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+              <span class="msg"></span>
+            </div>
+
+            <div class="con">
+              <span class="choose">Third Symptom</span>
+              <mat-form-field appearance="fill">
+                <mat-label>Choose your symptoms</mat-label>
+                <mat-select (selectionChange)="selectedthirdsymptom($event)">
+                  <mat-option *ngFor="let symptom of symptoms" [value]="symptom">
+                    {{symptom.viewValue}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+              <span class="msg"></span>
+            </div>
+
+            <div class="con">
+              <span class="choose">Please choose any of the following contradictions after taking medication!</span>
+              <mat-form-field appearance="outline">
+                <mat-label class="boldtitle">Select Answer</mat-label>
+                <mat-select class="backgroundselect" (selectionChange)="selectedindication($event)">
+                  <mat-option *ngFor="let indication of indications" [value]="indication">
+                    {{indication.viewValue}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+              <span class="msg"></span>
+            </div>
+          </div>
+          <div class="row upper">
+            <button class="button" (click)="productlistpage()">Find My Medicine!</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>

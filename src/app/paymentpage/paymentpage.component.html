@@ -13,6 +13,9 @@
                     <li class="nav-item"> <a data-toggle="pill" (click)="qrcodebutton()" class="nav-link "> <i
                                 class="fa fa-mobile-alt mr-2"></i> QR
                             Code </a> </li>
+                    <li class="nav-item"> <a data-toggle="pill" (click)="manualtransferbutton()" class="nav-link "> <i
+                                class="fa fa-mobile-alt mr-2"></i> Manual
+                            Transfer </a> </li>
                 </ul>
             </div>
         </div>
@@ -22,6 +25,9 @@
     <app-creditcard>
     </app-creditcard>
 </div>
-<div [hidden]="creditcard">
+<div [hidden]="creditcard || manualtransfer">
     <app-qrcode></app-qrcode>
+</div>
+<div [hidden]="creditcard || qrcode">
+    <app-manualtransfer></app-manualtransfer>
 </div>

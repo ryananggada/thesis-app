@@ -1,6 +1,6 @@
-<img class="logocenter" img src="/../assets/logo.png" width="350" height="350">
+<!-- <img class="logocenter" img src="/../assets/logo.png" width="350" height="350"> -->
 
-<div class="form_wrapper mb-3">
+<!-- <div class="form_wrapper mb-3">
   <div class="form_container">
     <div class="title_container">
       <h2>Register An Account</h2>
@@ -39,6 +39,64 @@
           <input class="button" type="submit" (click)="loginpage()" value="Register" />
         </form>
       </div>
+    </div>
+  </div>
+</div> -->
+<div class="row">
+  <div class="loginfade col-md-6">
+    <img class="object-fit_cover" img src="/../assets/obathijau.jpg" width="720" height="800">
+  </div>
+  <div class="col-md-6 transparent-blue align-items-center">
+    <div class="centerize mx-auto my-auto">
+      <span class="header" style="color: black;">Register An Account</span>
+      <form #registerform="ngForm">
+        <div class="row mt-4">
+          <input class="form-control" type="text" name="firstname" placeholder="FirstName" [(ngModel)]="test.first_name"
+            required />
+        </div>
+        <div class="row mt-4">
+          <input class="form-control" type="text" name="lastname" placeholder="LastName" [(ngModel)]="test.last_name"
+            required />
+        </div>
+        <div class="row mt-4 radio_option">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="radiogroup1" id="rd1" [(ngModel)]="test.gender"
+              value="M">
+            <label class="form-check-label" style="color: black;" for="rd1">
+              Male
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="radiogroup2" id="rd2" [(ngModel)]="test.gender"
+              value="F">
+            <label class="form-check-label" style="color: black;" for="rd2">
+              Female
+            </label>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <input class="form-control" type="date" name="dateofbirth" class="form-control" placeholder="YY-MM-DD"
+            [(ngModel)]="test.date_of_birth" required>
+        </div>
+        <div class="row mt-4">
+          <input class="form-control" type="text" name="address" placeholder="Address" [(ngModel)]="test.address"
+            required />
+        </div>
+        <div class="row mt-4">
+          <input class="form-control" type="email" name="email" placeholder="Email" [(ngModel)]="test.email" required />
+        </div>
+        <div class="row mt-4">
+          <input class="form-control" type="text" name="username" placeholder="Username" [(ngModel)]="test.username"
+            required />
+        </div>
+        <div class="row mt-4">
+          <input class="form-control" type="password" name="password" placeholder="Password" [(ngModel)]="test.password"
+            required />
+        </div>
+        <div class="row mt-4">
+          <input class="btn btn-light btn-lg btn-block" type="submit" (click)="loginpage()" value="Register" />
+        </div>
+      </form>
     </div>
   </div>
 </div>

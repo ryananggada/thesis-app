@@ -11,8 +11,12 @@ import { CreditCard } from '../models/creditcard';
 })
 export class PaymentpageComponent implements OnInit {
   creditcard = true;
+  qrcode = true;
+  manualtransfer = true;
 
-  constructor(private appcomponent: AppComponent) { }
+  constructor(private appcomponent: AppComponent) {
+    this.appcomponent.payment = true;
+  }
 
   ngOnInit(): void {
     this.appcomponent.showlogin = false;
@@ -20,11 +24,20 @@ export class PaymentpageComponent implements OnInit {
 
   creditcardbutton() {
     this.creditcard = true;
+    this.qrcode = false;
+    this.manualtransfer = false;
   }
 
   qrcodebutton() {
     this.creditcard = false;
+    this.qrcode = true;
+    this.manualtransfer = false;
   }
 
+  manualtransferbutton() {
+    this.manualtransfer = true;
+    this.creditcard = false;
+    this.qrcode = false;
+  }
 }
 

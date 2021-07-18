@@ -1,14 +1,19 @@
 <div class="container">
-  <div class="contheader h-100 w-100">
-    <header class="bgimg-1 w3-display-container w3-grayscale-min p-0 m-0" id="home">
-      <img class="logocenter" img src="/../assets/logo.png" width="350" height="350">
-      <div class="webtitle text-center">
-        <div class="bigtitle">Start finding your medicine effectively!</div>
-        <div class="subtitle1">We will help you to find your medicine easily.</div>
-        <a button class="button text-white" (click)="registerpage()">Register now to find out the features!</a>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="contheader h-100 w-100">
+        <header class="bgimg-1 w3-display-container w3-grayscale-min p-0 m-0" id="home">
+          <img class="logocenter" img src="/../assets/logo.png" width="350" height="350">
+          <div class="webtitle text-center">
+            <div class="bigtitle">Start finding your medicine effectively!</div>
+            <div class="subtitle1">We will help you to find your medicine easily.</div>
+            <a button class="button text-white" (click)="registerpage()">Register now to find out the features!</a>
+          </div>
+        </header>
       </div>
-    </header>
+    </div>
   </div>
+
 
   <div class="row mt-5">
     <div class="col-md-6 pl-5">
@@ -42,20 +47,36 @@
           About Us
         </strong></h2>
       <!-- card hor1 -->
-      <div class="card-horizontal">
-        <div class=" img-square-wrapper col-3 box p-0"> <img class="img-fluid" src="../../assets/steven.jpeg"
-            style="height: auto; width: auto;margin: 0;" alt="Card image cap"> </div>
-        <div class="card-body pt-0 pb-0 col-9">
-          <h4 class="card-title ">Steven Lee</h4>
+      <!-- <div class="card">
+        <div class="card-body pt-0 pb-0 col-9" style="display: flex;">
+          <div class=" img-square-wrapper col-3 box p-0"> <img class="img-fluid" src="../../assets/steven.jpeg"
+              style="height: auto; width: auto;margin: 0;" alt="Card image cap"> </div>
+          <h4 class="card-title" style="font-weight: bold; font-size: 18px;">Steven Lee</h4>
           <span><strong>Binus International Computer Science Class of 2021</strong></span>
-          <p class="card-text "> <small> In my current
+          <p class="card-text" style="font-size:16px;"> <small> In my current
               role, i was charge as Front End Developer and also for the UI/UX design. I will also be in charge of
               Medicinish
               database management.</small> </p>
         </div>
+      </div> -->
+      <div class="card">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="../../assets/steven.jpeg" class="card-img-top h-100" style="width: 200px;" alt="...">
+          </div>
+          <div class="col-md-7">
+            <div class="card-body">
+              <h4 class="card-title" style="font-weight: bold; font-size: 18px;">Steven Lee</h4>
+              <p class="card-text">In my current
+                role, i was charged as Front End Developer and also for the UI/UX design. I will also be in charge of
+                Medicinish
+                database management.</p>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="card-horizontal pt-4">
+      <!-- <div class="card pt-4">
         <div class=" img-square-wrapper col-3 box p-0"> <img class="img-fluid" src="../../assets/ryan.jpg"
             style="height: auto; width: auto;margin: 0;" alt="Card image cap"> </div>
         <div class="card-body pt-0 pb-0 col-9">
@@ -64,6 +85,22 @@
           <p class="card-text "> <small> In my current
               role, i will work as Back End Developer for Medicinish. I will also be in charge of deploying the
               application to the cloud. </small> </p>
+        </div>
+      </div> -->
+      <div class="card mt-4">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="../../assets/ryan.jpg" class="card-img-top h-100" style="width: 200px;" alt="...">
+          </div>
+          <div class="col-md-7">
+            <div class="card-body">
+              <h4 class="card-title" style="font-weight: bold; font-size: 18px;">Ryan Anggada Kho</h4>
+              <p class="card-text">In my current
+                role, i was charged as Front End Developer and also for the UI/UX design. I will also be in charge of
+                Medicinish
+                database management.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

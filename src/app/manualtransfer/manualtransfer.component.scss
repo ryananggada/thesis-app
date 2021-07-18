@@ -1,0 +1,7 @@
+.custom-file-control::after {
+  content: "Choose file...";
+}
+
+.custom-file-control::before {
+  content: "Browse";
+}

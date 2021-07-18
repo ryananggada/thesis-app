@@ -23,6 +23,7 @@ import { CreditcardComponent } from './creditcard/creditcard.component';
 import { QrcodeComponent } from './qrcode/qrcode.component';
 import { PostpurchaseComponent } from './postpurchase/postpurchase.component';
 import { TryComponent } from './try/try.component';
+import { ManualtransferComponent } from './manualtransfer/manualtransfer.component';
 
 
 
@@ -43,6 +44,7 @@ import { TryComponent } from './try/try.component';
     QrcodeComponent,
     PostpurchaseComponent,
     TryComponent,
+    ManualtransferComponent,
 
   ],
 

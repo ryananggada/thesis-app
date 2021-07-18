@@ -48,6 +48,7 @@ export class SymptomfilteringComponent implements OnInit {
     this.appComponent.register = true;
     this.appComponent.symptomfiltering = true;
     this.appComponent.showlogin = false;
+    this.appComponent.homepage = false;
   }
 
   ngOnInit(): void {
