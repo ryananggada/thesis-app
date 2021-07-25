@@ -52,8 +52,8 @@
               "sourceMap": false,
               "namedChunks": false,
               "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true,
+              "vendorChunk": true,
+              "buildOptimizer": false,
               "budgets": [
                 {
                   "type": "initial",
@@ -136,5 +136,8 @@
       }
     }
   },
-  "defaultProject": "tong-fang"
+  "defaultProject": "tong-fang",
+  "cli": {
+    "analytics": false
+  }
 }

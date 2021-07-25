@@ -11,6 +11,7 @@ export class RegisterService {
   constructor(private _http: HttpClient) { }
   //function for hitting API for register//
   public register(user: Test): Observable<any> {
+    console.log("user: ", user);
     return this._http.post<any>("/api/user/register", user);
   }
 }

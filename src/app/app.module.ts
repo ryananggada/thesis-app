@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { HttpClientModule } from '@angular/common/http';
@@ -61,7 +62,11 @@ import { ManualtransferComponent } from './manualtransfer/manualtransfer.compone
     HttpClientModule
   ],
 
-  providers: [SymptomParam, ShoppingList],
+  providers: [
+    { provide: LocationStrategy, useClass: PathLocationStrategy },
+    SymptomParam,
+    ShoppingList
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule { }
