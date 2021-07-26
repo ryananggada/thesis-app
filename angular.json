@@ -77,7 +77,8 @@
           },
           "configurations": {
             "production": {
-              "browserTarget": "tong-fang:build:production"
+              "browserTarget": "tong-fang:build:production",
+              "proxyConfig": "proxy-prod.conf.json"
             }
           }
         },
