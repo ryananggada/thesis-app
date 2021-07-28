@@ -63,7 +63,6 @@ import { ManualtransferComponent } from './manualtransfer/manualtransfer.compone
   ],
 
   providers: [
-    { provide: LocationStrategy, useClass: PathLocationStrategy },
     SymptomParam,
     ShoppingList
   ],
