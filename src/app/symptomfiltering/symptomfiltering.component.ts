@@ -54,7 +54,6 @@ export class SymptomfilteringComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
   productlistpage() {
     console.log("Searching for Products")
     this.medicineparam.first_symptom = this.firstsymptom;

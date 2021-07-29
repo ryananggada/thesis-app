@@ -10,9 +10,11 @@ import { ProductlistService } from '../services/productlist.service';
 import { ShoppingcartService } from '../services/shoppingcart.service';
 import { ShoppingcartComponent, ShoppingList } from '../shoppingcart/shoppingcart.component';
 
-@Injectable()
 //provider inject data that can be used from the class
-export class SymptomParam { public symptom!: MedicineParam; }
+@Injectable()
+export class SymptomParam {
+  public symptom!: MedicineParam;
+}
 export interface DialogData {
   dsc: string;
 }
@@ -57,7 +59,6 @@ export class ProductlistComponent implements OnInit {
     this.medicineparam = this.symptomparam.symptom;
     console.log(this.medicineparam)
     this.filterproducts()
-
   }
 
   addtocart(i: number) {
