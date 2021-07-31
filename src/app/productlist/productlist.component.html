@@ -1,6 +1,27 @@
-<img class="logocenter" img src="/../assets/logo.png" width="350" height="350">
+<div class="pagetitle1 text-center" style="background-color: rgba(15,47,231,0.8); margin-top: 95px; ">Showing results
+  for
+  {{medicineparam.first_symptom}}, {{medicineparam.second_symptom}} , {{medicineparam.third_symptom}}</div>
+<div class="container">
+  <div class="row mb-md-2">
+    <div *ngFor="let product of products; index as i" class="col-md-6 col-lg-4">
+      <div class="card shadow border-light mb-4" style="height: 455px; border-radius: 16px;">
+        <a href="#" class="position-relative">
+          <img src="{{product.image_url}}" class="card-img-top" style="width:250px; height: 250px; margin-left: 15%"
+            alt="image"> </a>
+        <div class="card-body">
+          <h4 *ngIf="product.name" class="font-weight-bold">{{product.name}}</h4>
+          <div class="post-meta" style="margin-bottom: 10px;"><span class="lh-120" style="font-weight: 16px;"><i
+                class="fas fa-map-marker-alt mr-2"></i>Rp.
+              {{product.price}}</span></div>
+          <a (click)="openDialog(i)">Click to see Description</a>
+          <button (click)="savecart(product.id!)" class="buttonaddtocart mt-2">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<div class="pagetitle1 text-center">Showing results for
+<!-- <div class="pagetitle1 text-center">Showing results for
   {{medicineparam.first_symptom}}, {{medicineparam.second_symptom}} , {{medicineparam.third_symptom}}</div>
 <div class="mb-3">
   <div class="row upper">
@@ -13,4 +34,4 @@
         <button (click)="savecart(product.id!)" class="mt-2">Add to Cart</button>
       </div>
     </div>
-  </div>
+  </div> -->

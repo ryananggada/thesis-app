@@ -1,6 +1,6 @@
 <img class="logocenter" img src="/../assets/logo.png" width="350" height="350">
 
-<div class="form_wrapper mb-5 ">
+<div class="form_wrapper mb-5 shadow-lg">
     <img class="avatarpic" img src="/../assets/gravatar.png">
     <div class="form_container">
         <div class="title_container">
@@ -21,7 +21,8 @@
                         <input type="text" [(ngModel)]="user.address" name="address" placeholder="Shipping Address"
                             required />
                     </div>
-                    <input class="button" (click)="edituser()" type="submit" value="Save Changes" />
+                    <input class="button" style="border-radius: 5px;" (click)="edituser()" type="submit"
+                        value="Save Changes" />
                 </form>
             </div>
         </div>

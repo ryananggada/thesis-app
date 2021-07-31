@@ -1,11 +1,11 @@
-.bg{
-    background-image: url('/../assets/pill.jpg');
-    background-repeat: no-repeat; 
-    background-size: cover;
-    height: max-content !important;
-    // background-attachment: fixed !important;
-    // margin-top: 100px;
-}
+// .bg{
+//     background-image: url('/../assets/pill.jpg');
+//     background-repeat: no-repeat; 
+//     background-size: cover;
+//     height: max-content !important;
+//     // background-attachment: fixed !important;
+//     // margin-top: 100px;
+// }
 
 span.msg,
 span.choose {
@@ -31,9 +31,9 @@ span.choose {
 
 .symptomsfilteringbox{
   background-color: rgb(255, 255, 255, 0.79);
-  border: solid 1px black;
+  margin-top: 150px;
   border-radius: 20px;
-  height: 850px;
+  height: 700px;
   width: 600px;
   padding-top: 30px;
   margin-left: auto;
@@ -52,6 +52,8 @@ span.choose {
 
 .upper{
   margin-top: 40px;
+  margin-left: 35px;
+  margin-right: 35px;
 }
 
 .boldtitle{

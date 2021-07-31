@@ -1,15 +1,28 @@
 <div class="container">
-  <div class="row">
-    <div class="col-md-12">
+  <div class="row" style="margin-top: 96px;">
+    <!-- <div class="col-md-12">
       <div class="contheader h-100 w-100">
         <header class="bgimg-1 w3-display-container w3-grayscale-min p-0 m-0" id="home">
-          <img class="logocenter" img src="/../assets/logo.png" width="350" height="350">
-          <div class="webtitle text-center">
+          <div class="webtitle text-left mt-5">
             <div class="bigtitle">Start finding your medicine effectively!</div>
             <div class="subtitle1">We will help you to find your medicine easily.</div>
             <a button class="button text-white" (click)="registerpage()">Register now to find out the features!</a>
           </div>
         </header>
+      </div>
+    </div> -->
+    <div class="col-md-12">
+      <div class="jumbotron bg-cover text-white"
+        style="background-image: url('/../assets/obatt.jpg'); height: 450px; padding-top: 120px;">
+        <div class="container">
+          <h1 class="display-4" style="font-size: 35px; color: black; font-weight: bold;">Start finding your medicine
+            effectively!</h1>
+          <p class="lead" style="font-weight: bold; margin-top: 20px;">We will help you to find your medicine easily.
+          </p>
+          <a class="button text-white" role="button" (click)="registerpage()">Register now to find out the
+            features!</a>
+        </div>
+        <!-- /.container   -->
       </div>
     </div>
   </div>
@@ -46,8 +59,7 @@
       <h2><strong>
           About Us
         </strong></h2>
-      <!-- card hor1 -->
-  <!-- <div class="card">
+  <div class="card">
     <div class="card-body pt-0 pb-0 col-9" style="display: flex;">
       <div class=" img-square-wrapper col-3 box p-0"> <img class="img-fluid" src="../../assets/steven.jpeg"
           style="height: auto; width: auto;margin: 0;" alt="Card image cap"> </div>
@@ -150,76 +162,102 @@
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-md-4">
-      <div class="row pl-5 pr-5">
-        <div class="card mt-4" style="background-color: lightgray;">
-          <div class="row no-gutters">
-            <div class="col-md-2">
-              <img src="../../assets/iconmag.png" class="card-img-top h-55" style="width: 50px;" alt="...">
-            </div>
-            <div class="col-md-3">
-              <div class="card-body">
-                <h4 class="card-title" style="font-weight: bold; font-size: 18px;">Symptoms Based Search</h4>
-                <p class="card-text">Medicinish allows its users to search their medicine through symptoms based search
-                  in
-                  the symptoms filtering page.</p>
-              </div>
-            </div>
-          </div>
+  <div class="row mt-3">
+    <div class="col-md-4 col-sm-6">
+      <div class="serviceBox">
+        <div class="service-icon">
+          <img src="../../assets/iconmag.png" class="card-img-top h-55" style="width: 50px;" alt="...">
         </div>
+        <h3 class="title">Symptoms Based Search</h3>
+        <p class="description">
+          Medicinish allows its users to search their medicine through symptoms based search
+          in
+          the symptoms filtering page.
+        </p>
       </div>
     </div>
 
-    <div class="col-md-4">
-      <div class="row pl-5 pr-5">
-        <div class="card mt-4" style="background-color: lightskyblue;">
-          <div class="row no-gutters">
-            <div class="col-md-2">
-              <img src="../../assets/iconbest.png" class="card-img-top h-100" style="width: 150px;" alt="...">
-            </div>
-            <div class="col-md-4">
-              <div class="card-body">
-                <h4 class="card-title" style="font-weight: bold; font-size: 18px;">Affordable Prices</h4>
-                <p class="card-text">Medicinish sells its products with the best quality with affordable prices.</p>
-              </div>
-            </div>
-          </div>
+    <div class="col-md-4 col-sm-6">
+      <div class="serviceBox">
+        <div class="service-icon">
+          <img src="../../assets/iconbest.png" class="card-img-top h-55" style="width: 50px;" alt="...">
         </div>
+        <h3 class="title">Affordable Prices</h3>
+        <p class="description">
+          Medicinish sells its products with the best quality with affordable prices.
+        </p>
       </div>
     </div>
 
-    <div class="col-md-4">
-      <div class="row pl-5 pr-5" style="width: 500px;">
-        <div class="card mt-4" style="background-color: lightgreen;">
-          <div class="row no-gutters" style="width: 850px;">
-            <div class="col-md-2">
-              <img src="../../assets/icondev.png" class="card-img-top h-100" style="width: 150px;" alt="...">
-            </div>
-            <div class="col-md-4">
-              <div class="card-body">
-                <h4 class="card-title" style="font-weight: bold; font-size: 18px;">Online Delivery</h4>
-                <p class="card-text">There's no need to visit the nearest drugstore, Medicinish will deliver your
-                  product
-                  to
-                  your front door.</p>
-              </div>
-            </div>
-          </div>
+    <div class="col-md-4 col-sm-6">
+      <div class="serviceBox">
+        <div class="service-icon">
+          <img src="../../assets/icondev.png" class="card-img-top h-55" style="width: 50px;" alt="...">
         </div>
+        <h3 class="title">Online Delivery</h3>
+        <p class="description">
+          There's no need to visit the nearest drugstore, Medicinish will deliver your
+          product
+          to
+          your front door.
+        </p>
       </div>
     </div>
   </div>
 
-
-
-
-
-
-  <div class="row pt-5">
+  <div class="row pt-5 mb-3">
     <div class="col-md-12 pl-5">
       <div class="h2 text-center"><strong>
           Our Popular Products
         </strong></div>
+    </div>
+  </div>
+
+  <div class="row upper mb-3">
+    <div class="col-md-3">
+      <div class="card pb-0 text-center" style="border: 2px solid #ece9e9; border-radius: 16px;">
+        <img class="mx-auto d-block" src="/../assets/decadryl.jpg" style="width:250px; height: 250px;" />
+        <div class="card-body">
+          <h3 style="font-size: 15pt;">Decadryl</h3>
+          <p class="price" style="color: #000000;">Rp.31.600</p>
+          <a>Bayer Indonesia</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card pb-0 text-center" style="border: 2px solid #ece9e9; border-radius: 16px;">
+        <img class="mx-auto d-block" src="/../assets/actifed.jpg"
+          style="width:250px; height: 250px; margin-left: 16px;" />
+        <div class="card-body">
+          <h3 style="font-size: 15pt;">Actifed</h3>
+          <p class="price" style="color: #000000;">Rp.75.000</p>
+          <a>GlaxoSmithKline Indonesia</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card pb-0 text-center" style="border: 2px solid #ece9e9; border-radius: 16px;">
+        <img class="mx-auto d-block" src="/../assets/panadol.png"
+          style="width:250px; height: 250px; margin-left: 16px;">
+        <div class="card-body">
+          <h3 style="font-size: 15pt;">Panadol</h3>
+          <p class="price" style="color: #000000;">Rp.18.700</p>
+          <a>Sterling</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card pb-0 text-center" style="border: 2px solid #ece9e9; border-radius: 16px;">
+        <img class="mx-auto d-block" src="/../assets/mylanta.jpeg"
+          style="width:250px; height: 250px; margin-left: 16px;">
+        <div class="card-body">
+          <h3 class="card-title" style="font-size: 15pt;">Mylanta</h3>
+          <p class="price" style="color: #000000;">Rp.22.000</p>
+          <a>Integrated Healthcare Indonesia</a>
+        </div>
+      </div>
     </div>
   </div>

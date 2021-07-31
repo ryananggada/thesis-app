@@ -37,11 +37,11 @@
   }
   
   .card button {
-    border: none;
+    // border: none;
     outline: 0;
     padding: 12px;
-    color: white;
-    background-color: #000;
+    color: black;
+    // background-color: #000;
     text-align: center;
     cursor: pointer;
     width: 100%;
@@ -52,6 +52,16 @@
     opacity: 0.7;
   }
 
+  .buttonaddtocart{
+    background-color: transparent; 
+    border: 2px solid #0f2fe7;
+    border-radius: 5px;
+  }
+
+  .buttonaddtocart:hover{
+    background-color: #0f2fe7;
+    color: white !important;
+  }
 
 
 

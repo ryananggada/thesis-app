@@ -30,7 +30,8 @@
                                                         routerLinkActive="active">Shopping Cart</a>
                                         </li>
                                         <li class="nav-item" *ngIf="symptomfiltering || productlist || shoppingcart"
-                                                [hidden]="homepage"> <a class="nav-link">{{user.first_name}}</a>
+                                                [hidden]="homepage"> <a class="nav-link"><i class="fa fa-user"></i>
+                                                        {{user.first_name}}</a>
                                         </li>
                                         <li class="nav-item" (click)="logout()" *ngIf="symptomfiltering || postpurchase"
                                                 [hidden]="homepage"> <a class="nav-link">Log

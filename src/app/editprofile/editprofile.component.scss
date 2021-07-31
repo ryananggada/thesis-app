@@ -1,6 +1,6 @@
 $black:#000000;
 $grey:#cccccc;
-$blue:rgba(0, 195, 255, 0.61);
+$blue:rgba(15,47,231,0.8);
 
 .clearfix {
 	&:after {
@@ -38,10 +38,10 @@ $blue:rgba(0, 195, 255, 0.61);
     margin-top: -85px;
 	position: relative;
 	z-index: 1;
-	border-top: 1px solid $blue;
-    border-left: 1px solid $blue;
-    border-right: 1px solid $blue;
-    border-bottom: 1px solid $blue;
+	// border-top: 1px solid $blue;
+  //   border-left: 1px solid $blue;
+  //   border-right: 1px solid $blue;
+  //   border-bottom: 1px solid $blue;
     border-radius: 15px;
 	-webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
 	-moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
@@ -90,6 +90,9 @@ $blue:rgba(0, 195, 255, 0.61);
 		margin-bottom: 20px;
         -webkit-animation: bounce 0.6s ease-out;
   	     animation: bounce 0.6s ease-out;
+    >input{
+      border-radius: 5px;
+    }
 		>span {
 			position: absolute;
 			left: 0;
@@ -100,7 +103,7 @@ $blue:rgba(0, 195, 255, 0.61);
 			text-align: center;
 			width: 30px;
 			>i {
-				padding-top: 10px;
+				padding-top: 5px;
 			}
 		}
 	}
@@ -150,7 +153,7 @@ $blue:rgba(0, 195, 255, 0.61);
 		-ms-transition: all 0.30s ease-in-out;
 		transition: all 0.30s ease-in-out;
 		&:hover {
-			background: darken($blue,7%);
+      background: #62cdff;
 		}
 		&:focus {
 			background: darken($blue,7%);

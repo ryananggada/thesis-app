@@ -62,23 +62,32 @@ export class SymptomfilteringComponent implements OnInit {
     this.medicineparam.indication = this.indication;
     console.log(this.medicineparam)
     this.symptomparam.symptom = this.medicineparam;
-    this.router.navigateByUrl('productlist');
+    if (this.medicineparam.first_symptom == "" || this.medicineparam.second_symptom == "" || this.medicineparam.third_symptom == "" || this.medicineparam.indication == "") {
+      alert('Symptoms and Indication must be filled!')
+    } else {
+      this.router.navigateByUrl('productlist');
+    }
   }
 
-  selectedfirstsymptom(event: MatSelectChange) {
-    this.firstsymptom = event.value.viewValue
+  selectedfirstsymptom(event: any) {
+    console.log(event.target.value)
+    // this.firstsymptom = event.value.viewValue
+    this.firstsymptom = event.target.value
   }
 
-  selectedsecondsymptom(event: MatSelectChange) {
-    this.secondsymptom = event.value.viewValue
+  selectedsecondsymptom(event: any) {
+    // this.secondsymptom = event.value.viewValue
+    this.secondsymptom = event.target.value
   }
 
-  selectedthirdsymptom(event: MatSelectChange) {
-    this.thirdsymptom = event.value.viewValue
+  selectedthirdsymptom(event: any) {
+    // this.thirdsymptom = event.value.viewValue
+    this.thirdsymptom = event.target.value
   }
 
-  selectedindication(event: MatSelectChange) {
-    this.indication = event.value.viewValue
+  selectedindication(event: any) {
+    // this.indication = event.value.viewValue
+    this.indication = event.target.value
   }
 
   symptom() {
