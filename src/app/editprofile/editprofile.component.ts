@@ -36,6 +36,10 @@ export class EditprofileComponent implements OnInit {
     )
   }
 
+  backtosymptom() {
+    this.router.navigateByUrl('symptomfiltering')
+  }
+
   getuserbyprofile(profileid: number) {
     this.profileservice.getprofile(profileid).subscribe(
       data => {

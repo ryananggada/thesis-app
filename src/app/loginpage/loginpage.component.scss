@@ -28,3 +28,7 @@
     font-size: 30px;
     font-weight: bold;
 }
+
+.ng-dirty.ng-invalid.ng-touched{
+  border-color: red;
+}

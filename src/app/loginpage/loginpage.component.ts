@@ -38,6 +38,10 @@ export class LoginpageComponent implements OnInit {
     )
   }
 
+  navigatetoregister() {
+    this.router.navigateByUrl('register')
+  }
+
   symptomsfilteringpage() {
     let user = this.test.username!
     let password = this.test.password!

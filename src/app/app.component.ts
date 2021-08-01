@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Test } from './models/test';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
   title = 'tong-fang';
@@ -22,6 +23,8 @@ export class AppComponent {
   user = new Test();
   transactionid: number = 0;
   currentuser: any;
+
+
 
   constructor(private router: Router) {
 

@@ -104,6 +104,10 @@ export class ShoppingcartComponent implements OnInit, AfterViewInit {
     )
   }
 
+  backtoproduct() {
+    this.router.navigateByUrl('productlist')
+  }
+
   getshoppingcartbyuserid() {
     const items: ItemList[] = []
     this.Shoppingcartservice.shoppingcartbyid(this.user.id!).subscribe(

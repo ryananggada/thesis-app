@@ -44,7 +44,7 @@
 </div> -->
 <div class="row">
   <div class="loginfade col-md-6">
-    <img class="object-fit_cover" img src="/../assets/registerrs.jpg" width="720" height="800">
+    <img class="object-fit_cover" img src="/../assets/registerrs.jpg" width="100%" height="900">
   </div>
   <div class="col-md-6 transparent-blue align-items-center">
     <div class="centerize mx-auto my-auto">
@@ -52,11 +52,11 @@
       <form #registerform="ngForm">
         <div class="row mt-4">
           <input class="form-control" type="text" name="firstname" placeholder="FirstName" [(ngModel)]="test.first_name"
-            required />
+            required>
         </div>
         <div class="row mt-4">
           <input class="form-control" type="text" name="lastname" placeholder="LastName" [(ngModel)]="test.last_name"
-            required />
+            required>
         </div>
         <div class="row mt-4 radio_option">
           <div class="form-check" style="margin-right: 10px;">
@@ -80,21 +80,26 @@
         </div>
         <div class="row mt-4">
           <input class="form-control" type="text" name="address" placeholder="Address" [(ngModel)]="test.address"
-            required />
+            required>
         </div>
         <div class="row mt-4">
-          <input class="form-control" type="email" name="email" placeholder="Email" [(ngModel)]="test.email" required />
+          <input class="form-control" type="email" name="email" placeholder="Email" [(ngModel)]="test.email" required>
         </div>
         <div class="row mt-4">
           <input class="form-control" type="text" name="username" placeholder="Username" [(ngModel)]="test.username"
-            required />
+            required>
         </div>
         <div class="row mt-4">
           <input class="form-control" type="password" name="password" placeholder="Password" [(ngModel)]="test.password"
-            required />
+            required>
         </div>
         <div class="row mt-4">
           <input class="btn btn-light btn-lg btn-block" type="submit" (click)="loginpage()" value="Register" />
+        </div>
+        <div class="row mt-3">
+          <button class="btn btn-link btn-lg btn-block" style="color: black;" (click)="navigatetologin()">Already
+            registered as a user?, Click
+            here to login!</button>
         </div>
       </form>
     </div>

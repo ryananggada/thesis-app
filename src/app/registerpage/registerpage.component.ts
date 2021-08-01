@@ -20,6 +20,10 @@ export class RegisterpageComponent implements OnInit {
   }
   ngOnInit(): void {
   }
+
+  navigatetologin() {
+    this.router.navigateByUrl("login")
+  }
   //Function test to call function register in register service and to do error handling//
   loginpage() {
     this.registerservice.register(this.test).subscribe(
