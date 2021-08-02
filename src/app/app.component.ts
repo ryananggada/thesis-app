@@ -34,7 +34,7 @@ export class AppComponent {
     console.log(this.register)
     this.currentuser = this.readlocalStorageValue('user.username');
     console.log("localstorage", this.currentuser)
-    this.user = JSON.parse(localStorage.getItem('currentuser') || '{}') as Test;
+    this.user = JSON.parse(localStorage.getItem('currentuser')! || '{}') as Test;
   }
 
   logout() {

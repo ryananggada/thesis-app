@@ -28,7 +28,7 @@ export class SymptomfilteringComponent implements OnInit {
   symptomfiltering = "false";
   medicineparam = new MedicineParam();
 
-  symptoms: Dropdown[] = [
+  symptoms: any[] = [
     { id: '1', viewValue: 'Fever' },
     { id: '2', viewValue: 'Cough' },
     { id: '3', viewValue: 'Headache' },
@@ -37,7 +37,7 @@ export class SymptomfilteringComponent implements OnInit {
     { id: '6', viewValue: 'Vomiting' }
   ]
 
-  indications: Dropdown[] = [
+  indications: any[] = [
     { id: 'liver&kidney', viewValue: 'Liver and Kidney' },
     { id: 'gastricmotility', viewValue: 'Gastric Motility' },
     { id: 'hypersensitive', viewValue: 'Hypersensitivity' },

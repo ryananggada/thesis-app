@@ -52,7 +52,7 @@ export class LoginpageComponent implements OnInit {
         console.log(this.response)
         if (data.valid == true) {
           localStorage.setItem('currentuser', JSON.stringify(data))
-          this.appComponent.user = data.profile
+          this.appComponent.user = data.user
           alert("Successfully Logged In")
           this.router.navigateByUrl('symptomfiltering');
         }
